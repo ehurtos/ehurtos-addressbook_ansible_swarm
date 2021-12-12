@@ -1,2 +1,2 @@
 [Ed_AnsibleHost2_Prod_SWARMMaster]
-172.31.15.64 username=ec2-user
+172.31.15.64 ansible_user=ec2-user
