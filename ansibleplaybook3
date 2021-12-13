@@ -6,6 +6,8 @@
   - name: start docker
     service: name=docker state=started
   - name: Download immage from Docker Hub
-    command: docker pull ehurtos/ed_tomcat_addrbook1:59
+    command: docker pull ehurtos/ed_tomcat_addrbook1:60
+  - name: Remove previous Swarm service and 3 replicas 
+    command: docker service rm Ed_AddrBook_SWARM1
   - name: Crate Swarm service and 3 replicas 
-    command: docker service create --name Ed_AddrBook_SWARM1 -p 6969:8080 --replicas 3 ehurtos/ed_tomcat_addrbook1:59
+    command: docker service create --name Ed_AddrBook_SWARM1 -p 6969:8080 --replicas 3 ehurtos/ed_tomcat_addrbook1:60
